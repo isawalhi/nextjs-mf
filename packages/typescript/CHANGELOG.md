@@ -2,6 +2,48 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# 1.0.0 (2022-11-19)
+
+### Dependency Updates
+
+* `utils` updated to version `1.0.0`
+
+### Bug Fixes
+
+* get types on remote url with subdirectory ([#302](https://github.com/module-federation/nextjs-mf/issues/302)) ([d3f9060](https://github.com/module-federation/nextjs-mf/commit/d3f9060586b671ce1dd18ab5ef45e1fb5f7d5172))
+* preserve path of exposed `.d.ts` files ([#265](https://github.com/module-federation/nextjs-mf/issues/265)) ([cc1c1f7](https://github.com/module-federation/nextjs-mf/commit/cc1c1f782477fd6b22c46fc3454de4e250d0d910))
+
+
+* feat(typescript)!: Use expose public path as basis for @mf-typescript output structure (#252) ([ae4e6f9](https://github.com/module-federation/nextjs-mf/commit/ae4e6f993ee7293250cd9bac94d5076c0800aebc)), closes [#252](https://github.com/module-federation/nextjs-mf/issues/252)
+
+
+### Features
+
+* federated types for Typescript based projects ([#245](https://github.com/module-federation/nextjs-mf/issues/245)) ([4a5e282](https://github.com/module-federation/nextjs-mf/commit/4a5e2824400cc843fa0c0504936a68c6c9f33946)), closes [#244](https://github.com/module-federation/nextjs-mf/issues/244)
+* **typescript:** excessive recompilation prevention ([#306](https://github.com/module-federation/nextjs-mf/issues/306)) ([6e1967f](https://github.com/module-federation/nextjs-mf/commit/6e1967f019afb25dfbcfe83627b08ae8b1fe97b2))
+* **typescript:** provide additional files for the typescript compiler ([#349](https://github.com/module-federation/nextjs-mf/issues/349)) ([a4d9d97](https://github.com/module-federation/nextjs-mf/commit/a4d9d976c4cf1c51352a266cadccf966c3f19fd3))
+
+
+### Performance Improvements
+
+* implement simple caching mechanism for fs lookup ([#282](https://github.com/module-federation/nextjs-mf/issues/282)) ([5d78834](https://github.com/module-federation/nextjs-mf/commit/5d78834b7ed2b6bd387a28c470aa2a094ee703a3))
+
+
+### BREAKING CHANGES
+
+* **typescript:** Reimplemented the whole plugin from round-up to enhance performance, prevent excessive recompilation and other issues.
+
+Some key changes to the plugin includes:
+
+- Downloading remote types before compilation starts.
+- Caching remote types for better performance.
+- Ability to provide Plugin options.
+
+Please go through plugin `readme.md` file to understand what's changed and how to use the plugin.
+* Updates to @mf-typescript folder structure, references to imported types need updating
+
+
+
 # [1.1.0](https://github.com/module-federation/nextjs-mf/compare/typescript-1.0.9...typescript-1.1.0) (2022-11-02)
 
 
